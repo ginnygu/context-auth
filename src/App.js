@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import AuthContextComponent from "./context/AuthContext";
+import Nav from "./components/Nav";
+import Signin from "./components/Signin";
+
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContextComponent>
+      <div className="App">
+        <Nav />
+        <Signin />
+      </div>
+    </AuthContextComponent>
   );
 }
 
